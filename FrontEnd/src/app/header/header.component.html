@@ -1,0 +1,18 @@
+<mat-toolbar style="background-color: rgb(255, 255, 255);">
+  <div class="example-button-container">
+    <button (click)="home()" style="transform: scale(1.6); margin-right: 10px; color: rgb(0, 0, 0);" mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+      <mat-icon (click)="home()">home</mat-icon>
+    </button>
+  </div>
+  <span style="transform: scale(1.2); color:rgb(0, 0, 0); margin-left: 10px;">FITnFLEX</span>
+  <span class="example-spacer"></span>
+
+  <div class="example-button-container">
+    <!-- Your three buttons on the right -->
+    <button style="transform: scale(1.2); margin-right: 40px; background-color: rgb(0, 255, 115); color: rgb(0, 0, 0);" mat-raised-button>{{this.username}}</button>
+    <button style="transform: scale(1.2); margin-right: 40px; background-color: black; color: white;" (click)="task()" mat-raised-button color="primary">Tasks</button>
+    <button style="transform: scale(1.2); margin-right: 40px; background-color: black; color: white;" (click)="leaderboard()" mat-raised-button color="primary">Leaderboard</button>
+    <button style="transform: scale(1.2); margin-right: 40px; background-color: black; color: white;" (click)="sendSms()" mat-raised-button color="primary">SMS</button>
+    <button style="transform: scale(1.2); margin-right: 10px" (click)='logout()' mat-raised-button color="accent">Logout</button>
+  </div>
+</mat-toolbar>
