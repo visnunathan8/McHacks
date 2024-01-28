@@ -1,0 +1,86 @@
+/* @import url('https://fonts.googleapis.com/css?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+ */
+
+.container {
+  height: 100vh;
+  background: black;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+body{
+  background-color: #111111;
+  display: flex;
+  align-items: center;
+  justify-conter: center;
+  font-family: 'Poppins', sans-serif;
+}
+#container1{
+  width: 100%;
+  margin-top: -80px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3%;
+  transition: flex-wrap 0.5s ease;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.element{
+  transform: scale(1.2);
+  width: 300px;
+  height: 200px;
+  background-color: #000;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.5s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.element:hover{
+  width: 330px;
+  height: 230px;
+}
+.element:hover p{
+  display: block;
+}
+.element p{
+  font-size: 2rem;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  display: none;
+  transition: 0.5s all;
+}
+#first{
+  background-image: url(https://www.eyeonbooks.com.au/hubfs/profit_increase.jpg#keepProtocol);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#second{
+  background-image: url(https://img.freepik.com/free-vector/flat-design-bankruptcy-concept_23-2148492420.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1704412800&semt=ais);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#third{
+  background-image: url(https://cdn-icons-png.flaticon.com/512/9865/9865111.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#fourth{
+  background-image: url(https://cdn-icons-png.flaticon.com/512/3712/3712216.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

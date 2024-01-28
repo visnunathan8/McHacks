@@ -1,0 +1,26 @@
+.container {
+    text-align: center;
+    margin: 50px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .label-container {
+    margin-top: 20px;
+  }
+  
+  .score-container {
+    margin-top: 10px;
+  }
+  
+  .feedback-container {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
+  }
+  

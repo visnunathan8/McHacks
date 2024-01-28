@@ -1,0 +1,35 @@
+<!-- your-component.component.html -->
+
+<app-header></app-header>
+<div class="container">
+  <div class="center">
+    <div class="top3">
+      <div class="two item" *ngFor="let user of users.slice(0, 3); let i = index">
+        <div class="pos">
+          {{ i + 1 }}
+        </div>
+        <div class="pic" [style.backgroundImage]="'url(' + user.profilePic + ')'"></div>
+        <div class="name">
+          {{ user.username }}
+        </div>
+        <div class="score">
+          {{ user.total_points }}
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="item" *ngFor="let user of users.slice(3); let i = index">
+        <div class="pos">
+          {{ i + 4 }}
+        </div>
+        <div class="pic" [style.backgroundImage]="'url(' + user.profilePic + ')'"></div>
+        <div class="name">
+          {{ user.username }}
+        </div>
+        <div class="score">
+          {{ user.total_points }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Red+Hat+Display:400,900&display=swap");
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #4B4168;
+  color: #333;
+}
+
+.container {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height:100vh;
+    width:100%;
+    background:url('https://images.unsplash.com/photo-1531685250784-7569952593d2?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat;
+    background-size:cover;
+    background-position:center;
+    animation:animateBg 5s linear infinite;
+    }
+
+.center {
+  transform: scale(1.1) !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.top3 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #ffffff;
+}
+.top3 .item {
+  box-sizing: border-box;
+  position: relative;
+  background: rgb(0, 0, 0);
+  width: 9rem;
+  height: 10rem;
+  text-align: center;
+  padding: 2.8rem 0 0;
+  margin: 1rem 1rem 2rem;
+  border-radius: 0.5rem;
+  transform-origin: bottom;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+  box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.1), 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+.top3 .item .pic {
+  position: absolute;
+  top: -2rem;
+  left: 2.5rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2), 0 1rem 1rem -0.5rem rgba(0, 0, 0, 0.3);
+}
+.top3 .item .pos {
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.top3 .item .name {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.top3 .item .score {
+  opacity: 0.5;
+}
+.top3 .item .score:after {
+  display: block;
+  color: white;
+  content: "points";
+  opacity: 0.5;
+}
+.top3 .item.one {
+  width: 10rem;
+  height: 11rem;
+  padding-top: 3.5rem;
+}
+.top3 .item.one .pic {
+  width: 5rem;
+  height: 5rem;
+  left: 2.5rem;
+}
+.top3 .item:hover {
+  transform: scale(1.05);
+}
+
+.list {
+  padding-left: 2rem;
+  margin: 0 auto;
+}
+.list .item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  height: 3rem;
+  border-radius: 4rem;
+  margin-bottom: 2rem;
+  background: #EAA786;
+  transform-origin: left;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+  box-shadow: 0 0 4rem 0 rgba(0, 0, 0, 0.1), 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+.list .item .pos {
+  font-weight: 900;
+  position: absolute;
+  left: -2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  width: 1.5rem;
+  color: rgb(0, 0, 0);
+  opacity: 0.6;
+  transition: opacity 200ms ease-in-out;
+}
+.list .item .pic {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2), 0 1rem 1rem -0.5rem rgba(0, 0, 0, 0.3);
+}
+.list .item .name {
+  flex-grow: 2;
+  flex-basis: 10rem;
+  font-size: 1.1rem;
+}
+.list .item .score {
+  margin-right: 1.5rem;
+  opacity: 0.5;
+}
+.list .item .score:after {
+  margin-right: 1rem;
+  color: black;
+  content: "points";
+  opacity: 0.5;
+}
+.list .item:hover {
+  transform: scale(1.05);
+}
+.list .item:hover .pos {
+  opacity: 0.8;
+}
+
+

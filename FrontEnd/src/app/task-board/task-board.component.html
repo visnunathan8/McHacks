@@ -1,0 +1,54 @@
+
+ <app-header></app-header>
+ <div class="container">
+    
+    <div class="row">
+        <div class="spinner-box left-box">
+          <div class="circle-border">
+            <div class="circle-core">
+                <div class="point-label">Today's Points:</div>
+              <div class="point-value today-points">{{this.todayPoints}}</div>
+            </div>
+          </div>  
+        </div>
+        
+        <div class="spinner-box right-box">
+          <div class="circle-border">
+            <div class="circle-core">
+                <div class="point-label">Total's Points:</div>
+              <div class="point-value today-points">{{this.totalPoints}}</div>
+            </div>
+          </div>  
+        </div>
+      </div>
+    <main class="page-content">
+    <div class="card">
+      <div class="content">
+        <h2 class="title">PushUp</h2>
+        <p class="copy">Success is not owned, it's leased, and rent is due every day. Pay with push-ups!</p>
+        <button class="btn" (click)="openHtmlFile()">PushUp</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Meditation</h2>
+        <p class="copy">Inhale courage, exhale fear. Meditation is the journey of the self, through the self, to the self.</p>
+        <button class="btn" (click)="openHtmlFileMed()">Meditation</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Reading</h2>
+        <p class="copy">A reader lives a thousand lives before he dies. The man who never reads lives only one</p>
+        <button class="btn">Reading</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Healthy food</h2>
+        <p class="copy">Invest in yourself. Eat healthily, think positively, exercise daily, sleep well, and live in harmony.</p>
+        <button class="btn">Healthy food</button>
+      </div>
+    </div>
+    </main>
+ </div>

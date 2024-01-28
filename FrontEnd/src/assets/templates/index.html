@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediapipe Feed</title>
+</head>
+<body>
+    <img src="{{ url_for('video_feed') }}" alt="Mediapipe Feed">
+    <br>
+    {{counter}}
+    {% if counter >= 5 %}
+        <div style="text-align: center; margin-top: 20px; font-size: 24px; color: green;">
+            Good job! You've completed 5 pushups!
+        </div>
+    {% endif %}
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.3/socket.io.js"></script>
+<script type="text/javascript">
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+    socket.on('target_achieved', function(msg) {
+        alert(msg.data);
+        var confirmClose = confirm('Click OK to close this tab.');
+        if (confirmClose) {
+            window.close();
+        }
+    });
+
+</script>
+
+</html>
