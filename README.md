@@ -1,4 +1,4 @@
-# Statfit
+# FITnFLEX
 ----
 An app that motivates people to stay fit.
 
