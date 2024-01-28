@@ -223,13 +223,16 @@ body {
   }
 
 .left-box {
-    margin-right: 350px;
+    margin-right: 200px;
 }
 
 .right-box {
-    margin-left: 350px;
+    margin-left: 200px;
 }
 
+.middle-box {
+    margin-left: 20px;
+}
   .circle-border {
     width: 300px;
     height: 100px;

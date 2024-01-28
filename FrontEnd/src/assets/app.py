@@ -29,7 +29,7 @@ def index():
 
 def gen():
     global counter
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture("sample_pushups.mov")
     done = False
     position = None
 

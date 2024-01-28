@@ -28,6 +28,28 @@ export class TaskBoardComponent {
     );
     
   }
+
+
+
+  openHtmlFileReading() {
+    this.userTaskService.openHtmlFile("task3",  this.username).subscribe(
+      () => {
+        console.log('Task marked and points incremented successfully.');
+
+        const url = 'http://127.0.0.1:5001/';
+
+        // Open the URL in a new window
+        window.open(url, '_blank');
+        this.fetchUserPoints();
+      },
+      (error) => {
+        console.error('Error marking task and incrementing points:', error);
+        // Handle error as needed
+      }
+    );
+    
+  }
+
   constructor(private user : UserService, private userTaskService: UserTaskService) {}
   todayPoints = 0
   totalPoints = 0
@@ -58,6 +80,29 @@ export class TaskBoardComponent {
       () => {
         console.log('Task marked and points incremented successfully.');
         const newWindow = window.open('assets/meditation.html', '_blank');
+        if (newWindow) {
+          // You can customize the properties of the new window, if needed
+          newWindow.focus();
+          this.fetchUserPoints();
+        } else {
+          alert('Please allow pop-ups for this site to open the new window.');
+        }
+      },
+      (error) => {
+        console.error('Error marking task and incrementing points:', error);
+        // Handle error as needed
+      }
+    );
+    
+  }
+
+
+
+  openHtmlFileNutrition() {
+    this.userTaskService.openHtmlFile("task4", this.username).subscribe(
+      () => {
+        console.log('Task marked and points incremented successfully.');
+        const newWindow = window.open('assets/Food.html', '_blank');
         if (newWindow) {
           // You can customize the properties of the new window, if needed
           newWindow.focus();

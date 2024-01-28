@@ -37,6 +37,9 @@ export class HeaderComponent {
     this.router.navigate(['graph'])
   }
   
+  homes() {
+    this.router.navigate(['home'])
+  }
 
   sendSms() {
     this.allocationService.sendSMS(this.username).subscribe(

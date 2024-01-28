@@ -13,7 +13,7 @@ import { UserService } from '../user.service';
 })
 export class LoginPageComponent {
   title = 'ServiceStation';
-  username = 'Guest'
+  username = ''
   password = ''
   loginError = false;
   

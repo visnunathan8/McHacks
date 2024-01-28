@@ -11,6 +11,8 @@ import { TaskBoardComponent } from './task-board/task-board.component';
 import { FitnessPageComponent } from './fitness-page/fitness-page.component';
 import { MeditationPageComponent } from './meditation-page/meditation-page.component';
 import { PushUpPageComponent } from './push-up-page/push-up-page.component';
+import { HomeComponent } from './home/home.component';
+import { DetailsComponent } from './details/details.component';
 
 export const routes: Routes = [
   { path: '', component: LoginPageComponent },
@@ -21,8 +23,17 @@ export const routes: Routes = [
   { path: 'task', component: TaskBoardComponent},
   { path: 'fitness', component: FitnessPageComponent},
   { path: 'meditation', component: MeditationPageComponent},
-  { path: 'pushup', component: PushUpPageComponent}
-
+  { path: 'pushup', component: PushUpPageComponent},
+  {
+    path: 'home',
+    component: HomeComponent,
+    title: 'Home page'
+  },
+  {
+    path: 'details/:id',
+    component: DetailsComponent,
+    title: 'Home details'
+  }
 ]
 
 @NgModule({

@@ -1,0 +1,5 @@
+newspaper3k
+Flask
+newsapi-python
+cohere
+

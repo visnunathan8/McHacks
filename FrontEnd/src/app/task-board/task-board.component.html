@@ -11,6 +11,15 @@
             </div>
           </div>  
         </div>
+
+        <div class="spinner-box middle-box">
+            <div class="circle-border">
+              <div class="circle-core">
+                  <div class="point-label">Total Steps Today :</div>
+                <div class="point-value today-points">1589</div>
+              </div>
+            </div>  
+          </div>
         
         <div class="spinner-box right-box">
           <div class="circle-border">
@@ -40,14 +49,14 @@
       <div class="content">
         <h2 class="title">Reading</h2>
         <p class="copy">A reader lives a thousand lives before he dies. The man who never reads lives only one</p>
-        <button class="btn">Reading</button>
+        <button class="btn" (click)="openHtmlFileReading()">Reading</button>
       </div>
     </div>
     <div class="card">
       <div class="content">
         <h2 class="title">Healthy food</h2>
         <p class="copy">Invest in yourself. Eat healthily, think positively, exercise daily, sleep well, and live in harmony.</p>
-        <button class="btn">Healthy food</button>
+        <button class="btn" (click)="openHtmlFileNutrition()">Healthy food</button>
       </div>
     </div>
     </main>

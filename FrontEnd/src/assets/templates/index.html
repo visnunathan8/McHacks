@@ -21,13 +21,11 @@
     var socket = io.connect('http://' + document.domain + ':' + location.port);
 
     socket.on('target_achieved', function(msg) {
-        alert(msg.data);
-        var confirmClose = confirm('Click OK to close this tab.');
-        if (confirmClose) {
-            window.close();
-        }
+        var confirmClose = confirm('Congrats! Click OK to close this tab.');
+            if (confirmClose) {
+                window.close();
+            }
     });
-
 </script>
 
 </html>

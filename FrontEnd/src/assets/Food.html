@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Task</title>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1531685250784-7569952593d2?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #e0f7fa; /* Fallback color - Light Blue-Green */
+            color: #004d40; /* Dark Green */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #webcam-container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #label-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .label-item {
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #00796b; /* Dark Teal */
+            color: #ffffff; /* White */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #004d40; /* Dark Green */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Your Nutrition Calculator.</h1>
+        <h5>You gotta eat healthy!</h5>
+    </div>
+
+    <button type="button" onclick="init()">Start</button>
+
+    <div id="webcam-container"></div>
+
+    <div id="label-container"></div>
+
+    <button type="button" onclick="submitMeal()">Submit</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+        const URL = "https://teachablemachine.withgoogle.com/models/j6n8EkgM4/";
+        let model, webcam, labelContainer, maxPredictions;
+
+        async function init() {
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+
+            const flip = true;
+            webcam = new tmImage.Webcam(400, 400, flip); // Increase webcam size
+            await webcam.setup();
+            await webcam.play();
+            window.requestAnimationFrame(loop);
+
+            document.getElementById("webcam-container").appendChild(webcam.canvas);
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                const labelItem = document.createElement("div");
+                labelItem.classList.add("label-item");
+                labelContainer.appendChild(labelItem);
+            }
+        }
+
+        async function loop() {
+            webcam.update();
+            await predict();
+            window.requestAnimationFrame(loop);
+        }
+
+        async function predict() {
+            const prediction = await model.predict(webcam.canvas);
+            for (let i = 0; i < maxPredictions; i++) {
+                const classPrediction = `${prediction[i].className}: ${prediction[i].probability.toFixed(2)}`;
+                labelContainer.childNodes[i].innerHTML = classPrediction;
+            }
+        }
+
+        function submitMeal() {
+            var confirmClose = confirm('Your meal has been tracked! Click OK to close this tab.');
+            if (confirmClose) {
+                window.close();
+            }
+        }
+    </script>
+</body>
+</html>

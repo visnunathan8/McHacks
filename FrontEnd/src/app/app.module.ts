@@ -28,10 +28,9 @@ import { LeaderBoardComponent } from './leader-board/leader-board.component';
 import { TaskBoardComponent } from './task-board/task-board.component';
 import { FitnessPageComponent } from './fitness-page/fitness-page.component';
 import { MeditationPageComponent } from './meditation-page/meditation-page.component';
-import { PushUpPageComponent } from './push-up-page/push-up-page.component';
 
 @NgModule({
-  declarations: [AppComponent, MainPageComponent, LoginPageComponent, AllocationPageComponent, HeaderComponent, GraphComponent, LeaderBoardComponent, TaskBoardComponent, FitnessPageComponent, MeditationPageComponent, PushUpPageComponent],
+  declarations: [AppComponent, MainPageComponent, LoginPageComponent, AllocationPageComponent, HeaderComponent, GraphComponent, LeaderBoardComponent, TaskBoardComponent, FitnessPageComponent, MeditationPageComponent],
   imports: [DayPilotModule, MatTabsModule, CanvasJSAngularChartsModule, HttpClientModule, MatDatepickerModule, ReactiveFormsModule, BrowserModule, BrowserAnimationsModule, MatToolbarModule, MatButtonModule, MatIconModule, FormsModule, AppRoutingModule,  MatInputModule, MatFormFieldModule, MatMomentDateModule],
   bootstrap: [AppComponent],
   exports:      [ AllocationPageComponent ],
