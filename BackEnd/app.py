@@ -145,7 +145,7 @@ def get_user_tasks(username):
 @app.route('/send_sms/<username>', methods=['GET'])
 def sms(username):
     cursor = mysql.connection.cursor()
-    client = Client('AC6d82c5d3f2d63eb1c6cfb4d26e126ac9', 'eb508b178afe2313c6d7b65f2f1089bd')
+    client = Client('*******', '******')
     cursor.execute("SELECT * FROM user_tasks WHERE username = %s", (username,))
     result = cursor.fetchone()
     cursor.close()
