@@ -1,5 +1,8 @@
 # 🌟 FITnFLEX - Community Well-being Web Application
 
+## Youtube Channel 
+https://www.youtube.com/watch?v=dVVz99QVuXI
+
 ## Introduction 🚀
    FITnFLEX is a revolutionary web application crafted to elevate community well-being by seamlessly integrating technology with health and wellness practices. This application is more than just a tool; it's a comprehensive lifestyle enhancer dedicated to improving physical, mental, and nutritional well-being for its users.
    
